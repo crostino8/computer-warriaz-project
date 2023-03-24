@@ -1,0 +1,39 @@
+/*
+filename: [style.css]
+author: [Danny]
+created: [23/03/2023]
+last modified: [23/03/2023]
+description: [index.html]
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  padding: 30px;
+}
+
+#nav_list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+}
+
+.nav_list_item {
+  margin: 0 15px;
+  font-weight: bold;
+  background-color: blue;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20%;
+}
+
