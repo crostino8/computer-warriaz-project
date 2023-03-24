@@ -16,10 +16,10 @@ description: [index.html]
   --dark-gray: #1F1F1F;
   --medium-gray: #28292a;
   --light-gray: #2d2f31;
+  --accent-blue: rgb(187, 225, 250)
 }
 
 /* ___________________________________________________________ */
-
 /* GLOBAL STYLING (APPLIES TO ALL .HTML FILES) */
 
 * {
@@ -41,35 +41,17 @@ a, a:hover {
   text-decoration: none;
 }
 
-/* ___________________________________________________________ */
-
-/*             NAVBAR             */
-/*   DO NOT TOUCH THIS SECTION    */
-nav, footer {
-  position: fixed;
-  width: 100%;
-  padding: 30px 40px;
-  z-index: 9999;
-  background-color: var(--light-gray);
-  user-select: none;
-}
-
-nav {
+main {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  border-bottom: 1px solid var(--white-border-color);
-  gap: 30px;
+  flex-direction: column;
+  padding: 20px 40px;
 }
 
 /* ___________________________________________________________ */
 /* FOR MOBILE RESPONSIVENESS */
 /* WORK IN PROGRESS */
 
-@media only screen and (max-width: 1050px) {
+/* @media only screen and (max-width: 1050px) {
   nav {
     flex-direction: column;
     justify-content: center;
@@ -90,9 +72,29 @@ nav {
     padding-left: 25px;
     margin: 0 20px 20px 0;
   }
-}
+} */
 
 /* ___________________________________________________________ */
+/* NAVBAR */
+nav, footer {
+  position: fixed;
+  width: 100%;
+  padding: 30px 40px;
+  z-index: 9999;
+  background-color: var(--light-gray);
+  user-select: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid var(--white-border-color);
+  gap: 30px;
+}
 
 #nav_logo_container img {
   height: 40px;
@@ -141,32 +143,30 @@ nav {
 /* SPECIAL CLASS FOR BLUE BUTTON ON NAVBAR */
 .pill_button {
   font-weight: bold;
-  background-color: #3a92a8;
+  background-color: var(--accent-blue);
+  opacity: 0.7;
   border-radius: 16px;
   padding: 15px 30px;
-  transition: background-color .4s ease, color .4s ease;
+  transition: all .4s ease;
   font-size: 1.2em;
   text-transform: uppercase;
   margin-right: 10px;
+  color: var(--dark-gray);
 }
 
 .pill_button:hover {
-  background-color: #4aafc9;
-  color: white;
+  opacity: 1;
+  color: var(--dark-gray);
 }
 
 /* ___________________________________________________________ */
+/*HOME PAGE STYLING*/
 
-/*        HOME PAGE STYLING               */
-
-main {
-  display: flex;
-  flex-direction: column;
+#home_page_content {
   gap: 30px;
-  padding: 20px 40px;
 }
 
-section {
+#home_page_content > section {
   width: 500px;
   background-color: var(--medium-gray);
   border-radius: 20px;
@@ -174,9 +174,81 @@ section {
 }
 
 /* ___________________________________________________________ */
+/* ABOUT PAGE STYLING */
 
-/*            FOOTER               */
-/*    DO NOT TOUCH THIS SECTION    */
+#about_page_content {
+
+}
+
+/* ___________________________________________________________ */
+/* JOBS PAGE STYLING */
+
+#jobs_page_styling {
+
+}
+
+/* ___________________________________________________________ */
+/* ENHANCEMENTS PAGE STYLING */
+
+#enhancements_page_styling {
+
+}
+
+/* ___________________________________________________________ */
+/* APPLY PAGE STYLING */
+#apply_page_content {
+  padding: 50px;
+}
+
+#apply_page_content h1 {
+  color: rgb(187, 225, 250)
+}
+
+#job_application_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--medium-gray);
+  border-radius: 18px;
+  padding: 35px 0;
+}
+
+.job_input {
+  width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+  background-color: var(--light-gray);
+  padding: 0.75rem;
+  color: var(--main-text-color);
+  transition: all .2s ease-in;
+  font-size: 1.05em;
+}
+
+.job_input::placeholder {
+  color: var(--main-text-color);
+  opacity: 0.5;
+}
+
+.job_input:hover {
+  border-color: rgb(4, 4, 5);
+}
+
+.job_input:focus {
+  outline: none;
+  border-color: rgb(0, 175, 244)
+}
+
+input[type="submit"], input[type="reset"] {
+  color: var(--dark-gray);
+  font-weight: bold;
+  background-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+/* ___________________________________________________________ */
+/*FOOTER*/
 
 footer {
   display: flex;
