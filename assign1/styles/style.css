@@ -5,7 +5,18 @@ created: [23/03/2023]
 last modified: [23/03/2023]
 description: [index.html]
 */
+
+/* Montserrat font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS VARAIBLES */
+:root {
+  --main-color: rgba(238, 238, 238, 0.75);
+}
+
+/* ___________________________________________________________ */
+
+/* GLOBAL STYLING (APPLIES TO ALL .HTML FILES) */
 
 * {
   margin: 0;
@@ -14,10 +25,24 @@ description: [index.html]
   font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-color: #212127;
+  color: var(--main-color);
+}
+
+a, a:hover {
+  color:  var(--main-color);
+  text-decoration: none;
+}
+
+/* ___________________________________________________________ */
+
+/* NAVBAR STYLING */
+/*     DANNY      */
 nav {
-  background-color: black;
-  color: white;
+  width: 100%;
   padding: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20);
 }
 
 #nav_list {
@@ -31,9 +56,48 @@ nav {
 .nav_list_item {
   margin: 0 15px;
   font-weight: bold;
-  background-color: blue;
-  padding: 10px;
-  text-align: center;
-  border-radius: 20%;
+  padding-bottom: 3px;
+  margin: 0 20px;
+  cursor: pointer;
 }
+
+.nav_list_item > a {
+  transition: color .4s ease;
+}
+
+.nav_list_item:hover > a {
+  color: white;
+}
+
+.nav_list_item:after {
+  content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .4s ease, background-color .4s ease;
+}
+
+.nav_list_item:hover:after {
+  width: 100%;
+  background-color: white;
+}
+
+/* SPECIAL CLASS FOR BLUE BUTTON ON NAVBAR */
+.pill_button {
+  font-weight: bold;
+  background-color: #3a92a8;
+  border-radius: 16px;
+  padding: 12px 25px;
+  margin-left: 10px;
+  transition: background-color .4s ease, color .4s ease;
+}
+
+.pill_button:hover {
+  background-color: #4aafc9;
+  color: white;
+}
+
+/* ___________________________________________________________ */
 
