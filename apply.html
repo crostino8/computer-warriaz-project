@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- DELETE THIS LATER -->
-  <img src="https://media.tenor.com/SumAMhoE7EgAAAAi/among-us.gif" style="z-index: 99999; position: fixed; top: 0px; right: 50px; height: 100px; width: 100px;"alt="">
+  <img src="https://media.tenor.com/SumAMhoE7EgAAAAi/among-us.gif" style="z-index: 99999; position: fixed; top: 0px; right: 50px; height: 100px; width: 100px;" alt="">
 <!-- DELETE THIS LATER -->
   <header>
     <nav>
@@ -28,22 +28,75 @@
   </header>
 
   <main id="apply_page_content">
-    <form id="job_application_form" action="">
+    <form id="job_application_form" action="submit">
       <h1>Job Application</h1>
-      <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number">
-      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name">
-      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name">
-      <input class="job_input" type="text" name="date_of_birth" id="date_of_birth" placeholder="Date of birth">
-      <input class="job_input" type="text" name="gender" id="gender" placeholder="Gender">
-      <input class="job_input" type="text" name="street_address" id="street_address" placeholder="Street Address">
-      <input class="job_input" type="text" name="suburb_town" id="suburb_town" placeholder="Surburb/Town">
-      <input class="job_input" type="text" name="state" id="state" placeholder="State">
-      <input class="job_input" type="text" name="postcode" id="postcode" placeholder="Postcode">
-      <input class="job_input" type="text" name="email_address" id="email_address" placeholder="Email address">
-      <input class="job_input" type="text" name="phone_number" id="phone_number" placeholder="Phone number">
-      <input class="job_input" type="text" name="skills_list" id="skills_list" placeholder="Skills">
-      <input class="job_input" type="text" name="other_skills" id="other_skills" placeholder="Other skills">
-      <input class="job_input" type="submit" value="Submit">
+      <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number" maxlength="5" required pattern="[a-zA-Z0-9]">
+      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name" maxlength="20" required pattern="[a-zA-Z]">
+      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name" maxlength="20" required pattern="[a-zA-Z]">
+      <input class="job_input" type="date" name="date_of_birth" id="date_of_birth">
+    <fieldset>
+      <legend><h3>Gender</h3></legend>
+    <div class="radio-group" >
+        <label id="male-label" for="Male"><input class="input_radio" type="radio" name="radio" id="Male" value="male">Male 
+        </label>
+        <label id="female-label" for="Female"><input class="input_radio" type="radio" name="radio" id="Female" value="female">Female  
+        </label>
+        <label id="others-label" for="Others"> <input class="input_radio" type="radio" name="radio" id="Others" value="others">Others 
+        </label>
+    </div>
+    </fieldset>
+      <input class="job_input" type="text" name="street_address" id="street_address" placeholder="Street Address" required maxlength="40">
+      <input class="job_input" type="text" name="suburb_town" id="suburb_town" placeholder="Surburb/Town" required maxlength="40">
+      <select class="job_input" name="state" id="state" required>
+        <option value="">State</option>
+        <option value="VIC">VIC</option>
+        <option value="NSW">NSW</option>
+        <option value="QLD">QLD</option>
+        <option value="NT">NT</option>
+        <option value="WA">WA</option>
+        <option value="SA">SA</option>
+        <option value="TAS">TAS</option>
+        <option value="ACT">ACT</option>
+      </select>
+      <input class="job_input" type="text" name="postcode" id="postcode" placeholder="Postcode" required pattern="[0-9]" maxlength="4">
+      <input class="job_input" type="email" name="email_address" id="email_address" placeholder="Email address" required >
+      <input class="job_input" type="text" name="phone_number" id="phone_number" placeholder="Phone number" maxlength="12" minlength="8" required pattern="[0-9 ]">
+      <fieldset>
+        <legend><h3>Skills List:</h3></legend>
+        <label for="programming">
+          <input class="input_checkbox" type="checkbox" id="programming" name="skill" value="programming">
+          Programming
+        </label>
+        <br>
+        <label for="game-design">
+          <input class="input_checkbox" type="checkbox" id="game-design" name="skill" value="game-design">
+          Game Design
+        </label>
+        <br>
+        <label for="art">
+          <input class="input_checkbox" type="checkbox" id="art" name="skill" value="art">
+          Art
+        </label>
+        <br>
+        <label for="audio">
+          <input class="input_checkbox" type="checkbox" id="audio" name="skill" value="audio">
+          Audio
+        </label>
+        <br>
+        <label for="project-management">
+          <input class="input_checkbox" type="checkbox" id="project-management" name="skill" value="project-management">
+          Project Management
+        </label>
+        <br>
+        <label for="other_skills">
+          <input class="input_checkbox" type="checkbox" id="other_skills" name="skill" value="other_skills">
+          Other Skills
+        </label>
+        
+    </fieldset>
+    
+      <textarea class="text_area" name="other_skills_text" id="other_skills_text" placeholder="Other skills"></textarea>
+      <input class="job_input" type="submit" value="Apply">
       <input class="job_input" type="reset" value="Reset">
     </form>
   </main>
