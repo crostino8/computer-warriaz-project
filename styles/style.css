@@ -33,6 +33,7 @@ body {
   background-color: var(--dark-gray);
   color: var(--main-text-color);
   padding-top: 105px;
+  padding-bottom: 178px;
 }
 
 a, a:hover {
@@ -43,7 +44,7 @@ a, a:hover {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 20px 40px;
 }
 
 section {
@@ -84,7 +85,7 @@ section {
 
 /* ___________________________________________________________ */
 /* NAVBAR */
-nav {
+nav, footer {
   position: fixed;
   width: 100%;
   padding: 30px 40px;
@@ -171,7 +172,7 @@ nav {
 /*HOME PAGE STYLING*/
 
 #home_page_content {
-
+  gap: 30px;
 }
 
 #banner_graphic {
@@ -185,8 +186,6 @@ nav {
   height: auto;
   object-fit: contain;
 }
-
-
 
 
 /* ___________________________________________________________ */
@@ -299,7 +298,6 @@ fieldset
 }
 
 
-
 /* ___________________________________________________________ */
 /*FOOTER*/
 
@@ -308,11 +306,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  bottom: 0;
+  left: 0;
   border-top: 1px solid var(--white-border-color);;
-  background-color: var(--light-gray);
-  margin-top: 30px;
-  padding: 30px 40px;
-  width: 100%;
 }
 
 #footer_list {
@@ -364,18 +360,35 @@ footer {
   cursor: pointer;
 }
 
-/* ___________________________________________________________ */
+table,tr,td{
+  background-color: #1F1F1F;
 
-
-
-
-Aside {
-  border: 4px inset beige;
-  border-radius: 14px;
-  margin: 1em;
-  padding: 1em;
-  width: 25%;
-  float: right;
 }
 
-#heading_position {font-family: calabri, sans-serif; font-size: 2em; font-weight: bold}
+dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+dl {
+  border: 3px double #ccc;
+  padding: 0.5em;
+}
+dt {
+  clear: left;
+float: left;
+  width: 40%;
+text-align: right;
+  font-weight: bold;
+}
+
+dd {
+  width: 55%;
+margin-left: 42%;
+}
+
+
+/* ___________________________________________________________ */
