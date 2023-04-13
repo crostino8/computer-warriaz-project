@@ -8,7 +8,6 @@
   <title>Apply</title>
 </head>
 <body>
-  <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php"></form>
   <!-- DELETE THIS LATER -->
   <img src="https://media.tenor.com/SumAMhoE7EgAAAAi/among-us.gif" style="z-index: 99999; position: fixed; top: 0px; right: 50px; height: 100px; width: 100px;" alt="">
 <!-- DELETE THIS LATER -->
@@ -29,12 +28,12 @@
   </header>
 
   <main id="apply_page_content">
-    <form id="job_application_form" action="submit">
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="job_application_form">
       <h1>Job Application</h1>
-      <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number" maxlength="5" required pattern="[GPG18]">
-      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name" maxlength="20" required pattern="[a-zA-Z]">
-      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name" maxlength="20" required pattern="[a-zA-Z]">
-      <input class="job_input" type="date" name="date_of_birth" id="date_of_birth">
+      <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number" maxlength="5"/>
+      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name" maxlength="20" required pattern="[A-Za-z]+"/>
+      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name" maxlength="20" required pattern="[A-Za-z]+"/>
+      <input class="job_input" type="date" name="date_of_birth" id="date_of_birth"/>
     <fieldset>
       <legend><h3>Gender</h3></legend>
     <div class="radio-group" >
@@ -59,9 +58,9 @@
         <option value="TAS">TAS</option>
         <option value="ACT">ACT</option>
       </select>
-      <input class="job_input" type="text" name="postcode" id="postcode" placeholder="Postcode" required pattern="[0-9]" maxlength="4">
-      <input class="job_input" type="email" name="email_address" id="email_address" placeholder="Email address" required >
-      <input class="job_input" type="text" name="phone_number" id="phone_number" placeholder="Phone number" maxlength="12" minlength="8" required pattern="[0-9 ]">
+      <input class="job_input" type="number" name="postcode" id="postcode" placeholder="Postcode" required min="0" max="9999" />
+      <input class="job_input" type="email" name="email_address" id="email_address" placeholder="Email address" required>
+      <input class="job_input" type="number" name="phone_number" id="phone_number" placeholder="Phone number" max="999999999999" min="10000000" required pattern="[0-9]">
       <fieldset>
         <legend><h3>Skills List:</h3></legend>
         <label for="programming">
