@@ -46,6 +46,15 @@ main {
   align-items: center;
 }
 
+section {
+  width: 80%;
+  background-color: var(--medium-gray);
+  border-radius: 20px;
+  padding: 40px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
 /* ___________________________________________________________ */
 /* FOR MOBILE RESPONSIVENESS */
 /* WORK IN PROGRESS */
@@ -165,14 +174,19 @@ nav {
 
 }
 
-section {
-  width: 700px;
-  background-color: var(--medium-gray);
-  border-radius: 20px;
-  padding: 40px;
-  margin-left: 30px;
-  margin-top: 30px;
+#banner_graphic {
+  width: 100%;
+  background-image: url("./images/bannergraphic.webp");
+  height: 450px;
 }
+
+#banner_graphic img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
 
 
 /* ___________________________________________________________ */
