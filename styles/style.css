@@ -1,9 +1,9 @@
 /*
 filename: [style.css]
-author: [Danny]
+author: [Danny, Arogrya]
 created: [23/03/2023]
-last modified: [23/03/2023]
-description: [index.html]
+last modified: [14/04/2023]
+description: [stylesheet for all .html pages]
 */
 
 /* Montserrat font */
@@ -68,34 +68,6 @@ section {
 h1, h2, h3 {
   margin-bottom: 10px;
 }
-
-/* ___________________________________________________________ */
-/* FOR MOBILE RESPONSIVENESS */
-/* WORK IN PROGRESS */
-
-/* @media only screen and (max-width: 1050px) {
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #nav_list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    border-top: 1px solid var(--white-border-color);
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-
-  #nav_logo_container {
-    padding-left: 25px;
-    margin: 0 20px 20px 0;
-  }
-} */
-
 /* ___________________________________________________________ */
 /* NAVBAR */
 nav, footer {
@@ -109,27 +81,27 @@ nav, footer {
 nav {
   position: fixed;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   top: 0;
   left: 0;
   border-bottom: 1px solid var(--white-border-color);
-  gap: 30px;
 }
 
 #nav_logo_container img {
   height: 20px;
-  
 }
 
 #nav_list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   list-style-type: none;
   width: 100%;
+  padding-left: 8px;
+  margin-left: 8px;
+  border-left: 2px solid var(--accent-blue)
 }
 
 .nav_list_item {
@@ -147,7 +119,7 @@ nav {
   color: white;
 }
 
-.nav_list_item:after {
+.nav_list_item::after {
   content: '';
 	display: block;
 	margin: auto;
@@ -157,7 +129,7 @@ nav {
 	transition: all .4s ease;
 }
 
-.nav_list_item:hover:after {
+.nav_list_item:hover::after {
   width: 100%;
   background-color: white;
 }
@@ -165,7 +137,7 @@ nav {
 /* SPECIAL CLASS FOR BLUE BUTTON ON NAVBAR */
 .pill_button {
   font-weight: bold;
-  background-color: var(--accent-blue);
+  background: transparent;
   opacity: 0.7;
   border-radius: 16px;
   padding: 13px 18px;
@@ -173,12 +145,15 @@ nav {
   font-size: 1em;
   text-transform: uppercase;
   margin-right: 5px;
-  color: var(--dark-gray);
+  color: var(--accent-blue);
+  background-color: rgba(0, 0, 0, 0.);
 }
 
 .pill_button:hover {
   opacity: 1;
-  color: var(--dark-gray);
+  color: var(--medium-gray);
+  background-color: var(--accent-blue);
+  box-shadow: 0 10px 20px rgba(152, 152, 152, 0.2);
 }
 
 /* ___________________________________________________________ */
@@ -192,15 +167,13 @@ nav {
   width: 100%;
   background-image: url("./images/bannergraphic.webp");
   height: 450px;
+  background-size: cover;
 }
 
 #banner_graphic img {
   width: 100%;
   height: auto;
-  object-fit: contain;
 }
-
-
 /* ___________________________________________________________ */
 /* ABOUT PAGE STYLING */
 
@@ -295,7 +268,9 @@ dd {
 aside {
   width: 30%;
   float: right;
-  font-style: italic; 
+  font-style: italic;
+  padding: 10px;
+  border: 1px solid var(--accent-blue)
 }
 
 aside > h4 {
@@ -325,6 +300,23 @@ aside > p {
 
 #enhancements_page_styling {
 
+}
+
+#enhancements_page_styling > section > p {
+  margin-top: 20px;
+}
+
+#enhancements_page_styling > section > div > a {
+  text-decoration: underline;
+  opacity: 0.7;
+  color: var(--accent-blue);
+  transition: 0.1s linear;
+}
+
+#enhancements_page_styling > section > div > a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  color: var(--accent-blue);
 }
 
 /* ___________________________________________________________ */
@@ -384,7 +376,6 @@ input[type="submit"], input[type="reset"] {
   float: left;
   clear: none;
   margin: 2px 5px 2px 20px;
-
 }
 
 .radio-group {
@@ -392,16 +383,19 @@ input[type="submit"], input[type="reset"] {
   flex-direction: row;
 }
 
-fieldset
-{
+fieldset {
   max-width:500px;
-  padding:16px;	
+  padding:16px;
+  border-color: var(--accent-blue);
+  font-weight: bold;
 }
 
+legend {
+  color: var(--accent-blue);
+}
 
 .input_checkbox {
   margin: 2px 5px 2px 10px;
-
 }
 
 .text_area {
@@ -414,7 +408,6 @@ fieldset
   transition: all .2s ease-in;
   font-size: 1.05em;
 }
-
 
 /* ___________________________________________________________ */
 /*FOOTER*/
@@ -479,8 +472,5 @@ footer {
   margin-right: 10px;
   cursor: pointer;
 }
-
-
-
 
 /* ___________________________________________________________ */

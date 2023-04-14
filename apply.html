@@ -13,14 +13,13 @@
       <a id="nav_logo_container" href="./index.html">
         <img src="./images/company_logo.svg" alt="Company Logo">
       </a>
-      <!-- <input id="hamburger_menu" type="checkbox"> -->
       <ul id="nav_list">
         <li class="nav_list_item"><a href="./index.html">Home</a></li>
         <li class="nav_list_item"><a href="./about.html">About</a></li>
         <li class="nav_list_item"><a href="./jobs.html">Jobs</a></li>
         <li class="nav_list_item"><a href="./enhancements.html">Enhancements</a></li>
-        <li><a class="pill_button" href="./apply.html">Apply</a></li>
-        <li><a class="pill_button" href="mailto:104349875@student.swin.edu.au">Contact us</a></li>
+        <li class="nav_list_item"><a href="./apply.html">Apply</a></li>
+        <li><a class="pill_button" href="mailto:104349875@student.swin.edu.au">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -29,11 +28,11 @@
     <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="job_application_form">
       <h1>Job Application</h1>
       <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number" required pattern="[a-zA-Z0-9\b]{5}$"/>
-      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name" required pattern="[A-Za-z]{0, 20}"/>
-      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name" required pattern="[A-Za-z]{0, 20}"/>
+      <input class="job_input" type="text" name="first_name" id="first_name" placeholder="First name" required pattern="[A-Za-z]{0,20}"/>
+      <input class="job_input" type="text" name="last_name" id="last_name" placeholder="Last name" required pattern="[A-Za-z]{0,20}"/>
       <input class="job_input" type="date" name="date_of_birth" required id="date_of_birth"/>
     <fieldset>
-      <legend><h3>Gender</h3></legend>
+      <legend>Gender</legend>
     <div class="radio-group" >
       <input checked class="input_radio" type="radio" name="radio" id="Male" value="male">
       <label id="male-label" for="Male">Male</label>
@@ -58,10 +57,10 @@
       </select>
       <input class="job_input" type="text" name="postcode" id="postcode" placeholder="Postcode" required pattern="[0-9]{4}" />
       <input class="job_input" type="email" name="email_address" id="email_address" placeholder="Email address" required>
-      <input class="job_input" type="text" name="phone_number" id="phone_number" placeholder="Phone number" required pattern="[0-9 ]{8, 12}">
+      <input class="job_input" type="text" name="phone_number" id="phone_number" placeholder="Phone number" required pattern="[0-9 ]{8,12}">
       <fieldset>
         <legend>Skills List</legend>
-        <input class="input_checkbox" type="checkbox" id="programming" name="skill1" value="programming">
+        <input checked class="input_checkbox" type="checkbox" id="programming" name="skill1" value="programming">
         <label for="programming">Programming</label>
         <input class="input_checkbox" type="checkbox" id="game-design" name="skill2" value="game-design">
         <label for="game-design">Game Design</label>
@@ -79,7 +78,6 @@
       <input class="job_input" type="reset" value="Reset">
     </form>
   </main>
-
   <footer>
     <ul id="footer_list">
       <li class="footer_link"><a href="./index.html">Home</a></li>
