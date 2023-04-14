@@ -54,6 +54,9 @@ main {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   background-color: var(--medium-gray);
   border-radius: 20px;
@@ -202,11 +205,11 @@ nav {
 /* ABOUT PAGE STYLING */
 
 #about_page_content {
-
 }
 
 table, tr, td{
-  background-color: #1F1F1F;
+  background-color: var(--accent-blue);
+  color: var(--dark-gray);
 
 }
 
@@ -243,6 +246,12 @@ dd {
   width: auto;
   height: auto;
   width: 100%;
+  border: 4px solid #040303;
+}
+
+#contact_us_link > a {
+  text-decoration: underline;
+  transition: linear 0.1s;
 }
 
 
@@ -254,22 +263,48 @@ dd {
 
 }
 
-<<<<<<< Updated upstream
 #position_description {
   display: flex;
   flex-direction: row;
-=======
-#jobs_page_styling > section > h1 {
-  font: 1.8em Arial, sans-serif;
 }
 
-#jobs_page_styling > section > h2 {
-  font: 1.6em Arial, sans-serif;
+#position_description > section > h1 {
+  font: italic small-caps 1.8em Arial, Helvetica, sans-serif;
 }
 
-#jobs_page_styling > section > h3 {
-  font: 1.4em Arial, sans-serif;
->>>>>>> Stashed changes
+#position_description > section > h2 {
+  font: small-caps 1.6em Arial, Helvetica, sans-serif;
+}
+
+#position_description > section > h3 {
+  font: small-caps 1.4em Arial, Helvetica, sans-serif;
+}
+
+#heading_container {
+  width: 100%;
+}
+
+#heading_container > div {
+  text-align: center;
+  float: left;
+  width: 70%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+aside {
+  width: 30%;
+  float: right;
+  font-style: italic; 
+}
+
+aside > h4 {
+  font-size: 0.8em;
+}
+
+aside > p {
+  margin-bottom: 10px;
+  font-size: 0.7em;
 }
 
 .job_description p {
@@ -284,16 +319,7 @@ dd {
   margin-bottom: 25px;
 }
 
-aside {
-  width: 25%;
-  height: 100px;
-  border-radius: 20px;
-  padding: 20px;
-  margin-left: 30px;
-  margin-top: 30px;
-  text-align: end;
-  clear:left;
-}
+
 /* ___________________________________________________________ */
 /* ENHANCEMENTS PAGE STYLING */
 
