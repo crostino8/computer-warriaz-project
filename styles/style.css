@@ -409,6 +409,15 @@ legend {
   font-size: 1.05em;
 }
 
+.text_area:hover {
+  border-color: rgb(4, 4, 5);
+}
+
+.text_area:focus {
+  outline: none;
+  border-color: rgb(0, 175, 244)
+}
+
 /* ___________________________________________________________ */
 /*FOOTER*/
 
