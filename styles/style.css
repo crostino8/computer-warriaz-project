@@ -47,7 +47,10 @@ a:hover {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 20px 40px;
+  width: 100%;
+  height: 100%;
 }
 
 section {
@@ -55,8 +58,8 @@ section {
   background-color: var(--medium-gray);
   border-radius: 20px;
   padding: 40px;
-  margin-left: 30px;
   margin-top: 30px;
+  font-size: 1.2em;
 }
 
 h1, h2, h3 {
@@ -113,7 +116,7 @@ nav {
 }
 
 #nav_logo_container img {
-  height: 40px;
+  height: 20px;
   
 }
 
@@ -121,7 +124,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   list-style-type: none;
   width: 100%;
 }
@@ -130,7 +133,7 @@ nav {
   font-weight: bold;
   padding-bottom: 3px;
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .nav_list_item > a {
@@ -162,11 +165,11 @@ nav {
   background-color: var(--accent-blue);
   opacity: 0.7;
   border-radius: 16px;
-  padding: 15px 30px;
+  padding: 13px 18px;
   transition: all .4s ease;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: uppercase;
-  margin-right: 10px;
+  margin-right: 5px;
   color: var(--dark-gray);
 }
 
@@ -202,6 +205,48 @@ nav {
 
 }
 
+table, tr, td{
+  background-color: #1F1F1F;
+
+}
+
+dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+dl {
+  padding: 0.5em;
+}
+dt {
+  clear: left;
+  float: left;
+  width: 40%;
+  text-align: right;
+  font-weight: bold;
+}
+
+dd {
+  width: 55%;
+  margin-left: 42%;
+}
+
+#about_us_company_logo{
+  border: 5px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#group_photo {
+  width: auto;
+  height: auto;
+  width: 100%;
+}
+
+
+
 /* ___________________________________________________________ */
 /* JOBS PAGE STYLING */
 
@@ -209,9 +254,22 @@ nav {
 
 }
 
+<<<<<<< Updated upstream
 #position_description {
   display: flex;
   flex-direction: row;
+=======
+#jobs_page_styling > section > h1 {
+  font: 1.8em Arial, sans-serif;
+}
+
+#jobs_page_styling > section > h2 {
+  font: 1.6em Arial, sans-serif;
+}
+
+#jobs_page_styling > section > h3 {
+  font: 1.4em Arial, sans-serif;
+>>>>>>> Stashed changes
 }
 
 .job_description p {
@@ -343,6 +401,7 @@ footer {
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--white-border-color);;
+  margin-top: 100px;
 }
 
 #footer_list {
@@ -393,40 +452,6 @@ footer {
   width: 35px;
   margin-right: 10px;
   cursor: pointer;
-}
-
-table,tr,td{
-  background-color: #1F1F1F;
-
-}
-
-dl {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-dl {
-  padding: 0.5em;
-}
-dt {
-  clear: left;
-float: left;
-  width: 40%;
-text-align: right;
-  font-weight: bold;
-}
-
-dd {
-  width: 55%;
-margin-left: 42%;
-}
-
-#grppht{
-  border: 5px solid #ccc;
-
 }
 
 
