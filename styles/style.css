@@ -1,9 +1,9 @@
 /*
 filename: [style.css]
-author: [Danny]
+author: [Danny, Arogrya]
 created: [23/03/2023]
-last modified: [23/03/2023]
-description: [index.html]
+last modified: [14/04/2023]
+description: [stylesheet for all .html pages]
 */
 
 /* Montserrat font */
@@ -35,48 +35,42 @@ body {
   padding-top: 105px;
 }
 
-a, a:hover {
+a {
   color:  var(--main-text-color);
   text-decoration: none;
+}
+
+a:hover {
+  color:rgb(187, 225, 250)
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 40px;
+  width: 100%;
+  height: 100%;
 }
 
-/* ___________________________________________________________ */
-/* FOR MOBILE RESPONSIVENESS */
-/* WORK IN PROGRESS */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--medium-gray);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 30px;
+  font-size: 1.2em;
+}
 
-/* @media only screen and (max-width: 1050px) {
-  nav {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #nav_list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    border-top: 1px solid var(--white-border-color);
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-
-  #nav_logo_container {
-    padding-left: 25px;
-    margin: 0 20px 20px 0;
-  }
-} */
-
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
 /* ___________________________________________________________ */
 /* NAVBAR */
-nav {
-  position: fixed;
+nav, footer {
   width: 100%;
   padding: 30px 40px;
   z-index: 9999;
@@ -85,35 +79,36 @@ nav {
 }
 
 nav {
+  position: fixed;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   top: 0;
   left: 0;
   border-bottom: 1px solid var(--white-border-color);
-  gap: 30px;
 }
 
 #nav_logo_container img {
-  height: 40px;
-  
+  height: 20px;
 }
 
 #nav_list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   list-style-type: none;
   width: 100%;
+  padding-left: 8px;
+  margin-left: 8px;
+  border-left: 2px solid var(--accent-blue)
 }
 
 .nav_list_item {
   font-weight: bold;
   padding-bottom: 3px;
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 .nav_list_item > a {
@@ -124,7 +119,7 @@ nav {
   color: white;
 }
 
-.nav_list_item:after {
+.nav_list_item::after {
   content: '';
 	display: block;
 	margin: auto;
@@ -134,7 +129,7 @@ nav {
 	transition: all .4s ease;
 }
 
-.nav_list_item:hover:after {
+.nav_list_item:hover::after {
   width: 100%;
   background-color: white;
 }
@@ -142,45 +137,97 @@ nav {
 /* SPECIAL CLASS FOR BLUE BUTTON ON NAVBAR */
 .pill_button {
   font-weight: bold;
-  background-color: var(--accent-blue);
+  background: transparent;
   opacity: 0.7;
   border-radius: 16px;
-  padding: 15px 30px;
+  padding: 13px 18px;
   transition: all .4s ease;
-  font-size: 1.2em;
+  font-size: 1em;
   text-transform: uppercase;
-  margin-right: 10px;
-  color: var(--dark-gray);
+  margin-right: 5px;
+  color: var(--accent-blue);
+  background-color: rgba(0, 0, 0, 0.);
 }
 
 .pill_button:hover {
   opacity: 1;
-  color: var(--dark-gray);
+  color: var(--medium-gray);
+  background-color: var(--accent-blue);
+  box-shadow: 0 10px 20px rgba(152, 152, 152, 0.2);
 }
 
 /* ___________________________________________________________ */
 /*HOME PAGE STYLING*/
 
 #home_page_content {
-
+  gap: 30px;
 }
 
-section {
-  width: 700px;
-  background-color: var(--medium-gray);
-  border-radius: 20px;
-  padding: 40px;
-  margin-left: 30px;
-  margin-top: 30px;
+#banner_graphic {
+  width: 100%;
+  background-image: url("./images/bannergraphic.webp");
+  height: 450px;
+  background-size: cover;
 }
 
-
+#banner_graphic img {
+  width: 100%;
+  height: auto;
+}
 /* ___________________________________________________________ */
 /* ABOUT PAGE STYLING */
 
 #about_page_content {
+}
+
+table, tr, td{
+  background-color: var(--accent-blue);
+  color: var(--dark-gray);
 
 }
+
+dl {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+dl {
+  padding: 0.5em;
+}
+dt {
+  clear: left;
+  float: left;
+  width: 40%;
+  text-align: right;
+  font-weight: bold;
+}
+
+dd {
+  width: 55%;
+  margin-left: 42%;
+}
+
+#about_us_company_logo{
+  border: 5px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#group_photo {
+  width: auto;
+  height: auto;
+  width: 100%;
+  border: 4px solid #040303;
+}
+
+#contact_us_link > a {
+  text-decoration: underline;
+  transition: linear 0.1s;
+}
+
+
 
 /* ___________________________________________________________ */
 /* JOBS PAGE STYLING */
@@ -189,11 +236,87 @@ section {
 
 }
 
+#position_description {
+  display: flex;
+  flex-direction: row;
+}
+
+#position_description > section > h1 {
+  font: italic small-caps 1.8em Arial, Helvetica, sans-serif;
+}
+
+#position_description > section > h2 {
+  font: small-caps 1.6em Arial, Helvetica, sans-serif;
+}
+
+#position_description > section > h3 {
+  font: small-caps 1.4em Arial, Helvetica, sans-serif;
+}
+
+#heading_container {
+  width: 100%;
+}
+
+#heading_container > div {
+  text-align: center;
+  float: left;
+  width: 70%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+aside {
+  width: 30%;
+  float: right;
+  font-style: italic;
+  padding: 10px;
+  border: 1px solid var(--accent-blue)
+}
+
+aside > h4 {
+  font-size: 0.8em;
+}
+
+aside > p {
+  margin-bottom: 10px;
+  font-size: 0.7em;
+}
+
+.job_description p {
+  margin-bottom: 15px;
+}
+
+.job_description p:first-child {
+  margin-top: 25px;
+}
+
+.job_description p:last-child {
+  margin-bottom: 25px;
+}
+
+
 /* ___________________________________________________________ */
 /* ENHANCEMENTS PAGE STYLING */
 
 #enhancements_page_styling {
 
+}
+
+#enhancements_page_styling > section > p {
+  margin-top: 20px;
+}
+
+#enhancements_page_styling > section > div > a {
+  text-decoration: underline;
+  opacity: 0.7;
+  color: var(--accent-blue);
+  transition: 0.1s linear;
+}
+
+#enhancements_page_styling > section > div > a:hover {
+  text-decoration: underline;
+  opacity: 1;
+  color: var(--accent-blue);
 }
 
 /* ___________________________________________________________ */
@@ -253,7 +376,6 @@ input[type="submit"], input[type="reset"] {
   float: left;
   clear: none;
   margin: 2px 5px 2px 20px;
-
 }
 
 .radio-group {
@@ -261,16 +383,19 @@ input[type="submit"], input[type="reset"] {
   flex-direction: row;
 }
 
-fieldset
-{
+fieldset {
   max-width:500px;
-  padding:16px;	
+  padding:16px;
+  border-color: var(--accent-blue);
+  font-weight: bold;
 }
 
+legend {
+  color: var(--accent-blue);
+}
 
 .input_checkbox {
   margin: 2px 5px 2px 10px;
-
 }
 
 .text_area {
@@ -284,8 +409,6 @@ fieldset
   font-size: 1.05em;
 }
 
-
-
 /* ___________________________________________________________ */
 /*FOOTER*/
 
@@ -293,17 +416,17 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  bottom: 0;
+  left: 0;
   border-top: 1px solid var(--white-border-color);;
-  background-color: var(--light-gray);
-  margin-top: 30px;
-  padding: 30px 40px;
-  width: 100%;
+  margin-top: 100px;
 }
 
 #footer_list {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
   width: 100%;
@@ -327,7 +450,7 @@ footer {
 #copyright_container  {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   margin-top: 15px;
   width: 100%;
@@ -351,17 +474,3 @@ footer {
 }
 
 /* ___________________________________________________________ */
-
-
-
-
-Aside {
-  border: 4px inset beige;
-  border-radius: 14px;
-  margin: 1em;
-  padding: 1em;
-  width: 25%;
-  float: right;
-}
-
-#heading_position {font-family: calabri, sans-serif; font-size: 2em; font-weight: bold}
