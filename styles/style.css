@@ -36,12 +36,15 @@ body {
 }
 
 a {
-  color:  var(--main-text-color);
+  color:  var(--accent-blue);
+  opacity: 0.7;
   text-decoration: none;
+  transition: 0.1s linear;
 }
 
 a:hover {
-  color:rgb(187, 225, 250)
+  color:rgb(187, 225, 250);
+  opacity: 1;
 }
 
 main {
@@ -88,6 +91,11 @@ nav {
   border-bottom: 1px solid var(--white-border-color);
 }
 
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 #nav_logo_container img {
   height: 20px;
 }
@@ -112,6 +120,7 @@ nav {
 }
 
 .nav_list_item > a {
+  color: var(--main-text-color);
   transition: color .4s ease;
 }
 
