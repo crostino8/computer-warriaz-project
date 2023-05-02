@@ -14,7 +14,7 @@
   include('header.inc');
   ?>
   <main id="apply_page_content">
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" id="job_application_form">
+    <form action="processEOI.php" method="post" id="job_application_form">
       <h1>Job Application</h1>
       <label for="job_reference_number">Job reference number:</label>
       <input class="job_input" type="text" name="job_reference_number" id="job_reference_number" placeholder="Job reference number" required pattern="[a-zA-Z0-9]{5}" />
