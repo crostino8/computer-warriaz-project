@@ -1,16 +1,11 @@
-
 <?php
-include ('menu.php');
-function header(){
-return'
+echo'
 <header>
     <nav>
       <a id="nav_logo_container" href="./index.html">
         <img src="./images/company_logo.svg" alt="Company Logo">
-      </a>
-      '+ menu() +'
-    </nav>
+      </a>';
+include ("menu.inc");
+echo'</nav>
 </header>';
-}
-
 ?>

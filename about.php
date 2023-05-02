@@ -8,21 +8,9 @@
   <title>About</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <a id="nav_logo_container" href="./index.html">
-        <img src="./images/company_logo.svg" alt="Company Logo">
-      </a>
-      <ul id="nav_list">
-        <li class="nav_list_item"><a href="./index.html">Home</a></li>
-        <li class="nav_list_item"><a href="./about.html">About</a></li>
-        <li class="nav_list_item"><a href="./jobs.html">Jobs</a></li>
-        <li class="nav_list_item"><a href="./enhancements.html">Enhancements</a></li>
-        <li class="nav_list_item"><a href="./apply.html">Apply</a></li>
-        <li><a class="pill_button" href="mailto:104349875@student.swin.edu.au">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <?php
+    include('header.inc');
+  ?>
   <main id="about_page_content">
     <section>
       <div>
@@ -108,21 +96,8 @@
       <p>As for my group members, we all have different tastes when it comes to books and music. Some of our favorites include "The Catcher in the Rye" by J.D. Salinger, "To Kill a Mockingbird" by Harper Lee, and "The Great Gatsby" by F. Scott Fitzgerald. When it comes to music, we enjoy everything from indie and alternative to hip hop and electronic. Some of our favorite artists include Radiohead, Arcade Fire, Kendrick Lamar, and Daft Punk.<p>
     </section>
   </main>
-  <footer>
-    <ul id="footer_list">
-      <li class="footer_link"><a href="./index.html">Home</a></li>
-      <li class="footer_link"><a href="./about.html">About</a></li>
-      <li class="footer_link"><a href="./jobs.html">Jobs</a></li>
-      <li class="footer_link"><a href="./enhancements.html">Enhancements</a></li>
-      <li class="footer_link"><a href="./apply.html">Apply</a></li>
-    </ul>
-    <div id="copyright_container">
-      <p>&#169; SQUARE ENIX LTD. All Rights Reserved.</p>
-      <div id="github_container">
-        <a href="https://github.com/dvaanc/computer-warriaz-project" target="_blank"><img src="./images/github_logo.svg" alt="github logo"></a>
-        <span class="footer_link"><a href="https://github.com/dvaanc/computer-warriaz-project" target="_blank">Made by Computer Warriaz</a></span>
-      </div>
-    </div>
-  </footer>
+  <?php
+  include("footer.inc");
+  ?>
 </body>
 </html>

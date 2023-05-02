@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,15 @@
   <link rel="stylesheet" href="./styles/style.css">
   <title>Home</title>
 </head>
+
 <body>
-  <header>
-    <?php 
-    include('footer.php');
-    echo footer();
-    ?>
-                <!-- HOME PAGE CONTENT GOES BELOW  -->
+  <?php
+    include('header.inc');
+  ?>
+  <!-- HOME PAGE CONTENT GOES BELOW  -->
   <main id="home_page_content">
     <div id="banner_graphic">
-      
+
     </div>
     <section>
       <p>
@@ -26,28 +26,15 @@
       <p>
         Link to video demonstration: <a href="https://www.youtube.com/watch?v=7mZ14eQOWHM">https://www.youtube.com/watch?v=7mZ14eQOWHM</a>
       </p>
-      
+
     </section>
 
   </main>
   <!-- HOME PAGE CONTENT GOES ABOVE  -->
-  <footer>
-    <ul id="footer_list">
-      <li class="footer_link"><a href="./index.html">Home</a></li>
-      <li class="footer_link"><a href="./about.html">About</a></li>
-      <li class="footer_link"><a href="./jobs.html">Jobs</a></li>
-      <li class="footer_link"><a href="./enhancements.html">Enhancements</a></li>
-      <li class="footer_link"><a href="./apply.html">Apply</a></li>
-    </ul>
-    <div id="copyright_container">
-      <p>&#169; SQUARE ENIX LTD. All Rights Reserved.</p>
-      <div id="github_container">
-        <a href="https://github.com/dvaanc/computer-warriaz-project" target="_blank"><img src="./images/github_logo.svg" alt="github logo"></a>
-        <span class="footer_link"><a href="https://github.com/dvaanc/computer-warriaz-project" target="_blank">Made by Computer Warriaz</a></span>
-      </div>
-    </div>
-  </footer>
-
+  <?php
+  include("footer.inc");
+  ?>
 
 </body>
+
 </html>
