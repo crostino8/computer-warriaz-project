@@ -9,20 +9,10 @@
 </head>
 <body>
   <header>
-    <nav>
-      <a id="nav_logo_container" href="./index.html">
-        <img src="./images/company_logo.svg" alt="Company Logo">
-      </a>
-      <ul id="nav_list">
-        <li class="nav_list_item"><a href="./index.html">Home</a></li>
-        <li class="nav_list_item"><a href="./about.html">About</a></li>
-        <li class="nav_list_item"><a href="./jobs.html">Jobs</a></li>
-        <li class="nav_list_item"><a href="./enhancements.html">Enhancements</a></li>
-        <li class="nav_list_item"><a href="./apply.html">Apply</a></li>
-        <li><a class="pill_button" href="mailto:104349875@student.swin.edu.au">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <?php 
+    include('footer.php');
+    echo footer();
+    ?>
                 <!-- HOME PAGE CONTENT GOES BELOW  -->
   <main id="home_page_content">
     <div id="banner_graphic">
