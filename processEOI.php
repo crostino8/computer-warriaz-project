@@ -26,6 +26,8 @@ if (!$tableExists) {
 }
 ?>
 
+<form method="post" action="apply.php" novalidate>
+</form>
 
 <?php
 $job_reference_number = mysqli_real_escape_string($conn, trim($_POST['job_reference_number']));
@@ -37,7 +39,9 @@ $street_address = mysqli_real_escape_string($conn, trim($_POST['street_address']
 $suburb_town = mysqli_real_escape_string($conn, trim($_POST['suburb_town']));
 $state = mysqli_real_escape_string($conn, $_POST['state']);
 $postcode = mysqli_real_escape_string($conn, trim($_POST['postcode']));
-
+$email_address = mysqli_real_escape_string($conn, trim($_POST['email_address']));
+$phone_number = mysqli_real_escape_string($conn, trim($_POST['phone_number']));
+$other_skills = mysqli_real_escape_string($conn, trim($_POST['other_skills']));
 
 $errors = array();
 
@@ -53,10 +57,57 @@ if (!preg_match('/^[A-Za-z ]{1,20}$/', $last_name)) {
     $errors[] = 'Last name must be max 20 alpha characters';
 }
 
+if (!preg_match("/([0-9]{2})\/([0-9]{2})\/([0-9]{4})/", $date_of_birth, $matches)) {
+    $error = true;
+    echo '<error elementid="date_of_birth" message="Date of Birth - Please enter a valid date in the format - dd/mm/yyyy"/>';
 
+} else {
+    $dob = DateTime::createFromFormat('d/m/Y', $date_of_birth);
+    $now = new DateTime();
+    $diff = $dob->diff($now)->y;
 
+    if ($diff < 15 || $diff > 80) {
+      $error = true;
+      echo '<error elementid="date_of_birth" message="Date of Birth - Please enter a valid date of birth between 15 and 80 years ago." />';
+    }
+  }
+  
+  if (isset($_POST['gender']) && $_POST['gender'] != '') {
+    $gender = $_POST['gender'];
+  }
 
+if (!preg_match('/^[A-Za-z0-9]{1,40}$/', $street_address)) {
+    $errors[] = 'Street address must be max 40 alpha characters';
+}
 
+if (!preg_match('/^[A-Za-z ]{1,40}$/', $suburb_town)) {
+    $errors[] = 'Suburb/Town must be max 40 alpha characters';
+}
 
+if (!in_array($state, array("VIC", "NSW", "QLD", "NT", "WA", "SA", "TAS", "ACT"))) {
+    $errors[] = 'A state must be selected';
+}
+
+if (!preg_match('/^[0-9]{4}$/', $postcode)) {
+    $errors[] = 'A valid postcode must be entered';
+}
+
+if (filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
+}   else {
+    $errors[] = 'A valid email address must be used';
+}
+
+if (!preg_match('/^\d{1,3}([ ]?\d{3}){2,3}$/', $phone_number)) {
+    $errors[] = 'Invalid phone number';
+}
+
+if (isset($_POST['other_skills']) && $_POST['other_skills'] == 'on') {
+    if (!empty($_POST['other_skills_text'])) {
+      $my_value = $_POST['other_skills_text'];
+
+    } else {
+      echo 'Please enter a value in the textbox.';
+    }
+}
 
 ?>
