@@ -21,6 +21,9 @@ if (!$tableExists) {
                 suburb_town VARCHAR(40) NOT NULL,
                 state_name CHAR(3) NOT NULL,
                 postcode CHAR(4) NOT NULL
+                phone_number INT(12)
+                skills varchar(40)
+                other_skills varchar(40)
             )";
     mysqli_query($conn, $sql);
 }
